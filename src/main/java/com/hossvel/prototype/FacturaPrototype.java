@@ -11,11 +11,11 @@ public class FacturaPrototype {
     @PostConstruct
     void init() {
         plantilla = new FacturaEntity();
-        plantilla.empresa = "EMPRESA - HOSSVELL SAC";
-        plantilla.cliente = "Plantilla Cliente";
-        plantilla.moneda = "PEN";
-        plantilla.subtotal = 0;
-        plantilla.impuestos = 0.0;
+        plantilla.setEmpresa("EMPRESA - HOSSVELL SAC");
+        plantilla.setCliente("Plantilla Cliente");
+        plantilla.setMoneda("PEN");
+        plantilla.setSubtotal(0);
+        plantilla.setImpuestos(0.0);
     }
 
     public FacturaEntity getPlantilla() {

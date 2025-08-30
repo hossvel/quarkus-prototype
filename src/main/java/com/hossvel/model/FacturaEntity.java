@@ -1,11 +1,20 @@
 package com.hossvel.model;
 
 public class FacturaEntity implements Cloneable {
-    public String empresa;
-    public String cliente;
-    public String moneda;
-    public double subtotal;
-    public double impuestos;
+    private String empresa;
+    private String cliente;
+    private String moneda;
+    private double subtotal;
+    private double impuestos;
+    private double total;
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
 
     @Override
     public FacturaEntity clone() {
@@ -14,5 +23,45 @@ public class FacturaEntity implements Cloneable {
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Error al clonar factura", e);
         }
+    }
+
+    public String getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    public String getMoneda() {
+        return moneda;
+    }
+
+    public void setMoneda(String moneda) {
+        this.moneda = moneda;
+    }
+
+    public double getSubtotal() {
+        return subtotal;
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.subtotal = subtotal;
+    }
+
+    public double getImpuestos() {
+        return impuestos;
+    }
+
+    public void setImpuestos(double impuestos) {
+        this.impuestos = impuestos;
     }
 }

@@ -15,10 +15,10 @@ public class FacturaServiceImpl implements IFacturaService {
     @Override
     public FacturaEntity generarFactura(FacturaDTO facturaDTO) {
         FacturaEntity clon = facturaPrototype.getPlantilla().clone();
-        clon.cliente = facturaDTO.cliente;
-        clon.subtotal = facturaDTO.subtotal;
-        clon.impuestos = facturaDTO.subtotal * 0.18;
-
+        clon.setCliente(facturaDTO.cliente);
+        clon.setSubtotal(facturaDTO.subtotal);
+        clon.setImpuestos(facturaDTO.subtotal * 0.18);
+        clon.setTotal(clon.getSubtotal() + clon.getImpuestos());
         return clon;
     }
 }
