@@ -16,6 +16,7 @@ public class FacturaPrototype {
         plantilla.setMoneda("PEN");
         plantilla.setSubtotal(0);
         plantilla.setImpuestos(0.0);
+        plantilla.setTotal(0);
     }
 
     public FacturaEntity getPlantilla() {

@@ -1,12 +1,11 @@
 package com.hossvel.builder;
 
-
 import com.hossvel.model.FacturaEntity;
 
-public class FacturaInternacionalBuilder implements IFacturaBuilder{
-
+public class FacturaNacionalBuilder implements IFacturaBuilder{
 
     private FacturaEntity factura = new FacturaEntity();
+
 
 
     public void construirCliente(String nombre) {
@@ -15,18 +14,16 @@ public class FacturaInternacionalBuilder implements IFacturaBuilder{
 
 
     public void construirMoneda() {
-
-        factura.setMoneda("USD");
+        factura.setMoneda("PEN");
     }
 
     @Override
     public void calcularSubTotal(double subtotal) {
-
         factura.setSubtotal(subtotal);
     }
 
     public void calcularImpuestos() {
-        factura.setImpuestos(0); // Exento de impuestos
+        factura.setImpuestos(factura.getSubtotal() * 0.18); // Exento de impuestos
     }
 
     public void calcularTotal(){
@@ -34,6 +31,7 @@ public class FacturaInternacionalBuilder implements IFacturaBuilder{
         factura.setTotal(factura.getSubtotal() + factura.getImpuestos());
 
     }
+
 
     public FacturaEntity getFactura() {
         return factura;
