@@ -4,7 +4,6 @@ import com.hossvel.builder.FacturaInternacionalBuilder;
 import com.hossvel.builder.FacturaNacionalBuilder;
 import com.hossvel.builder.IFacturaBuilder;
 import com.hossvel.model.FacturaEntity;
-import com.hossvel.prototype.FacturaPlantilla;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 

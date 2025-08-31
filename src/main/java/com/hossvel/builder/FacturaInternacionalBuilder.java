@@ -6,7 +6,7 @@ import com.hossvel.model.FacturaEntity;
 public class FacturaInternacionalBuilder implements IFacturaBuilder{
 
 
-    private FacturaEntity factura = new FacturaEntity();
+    private FacturaEntity factura;
 
     public FacturaInternacionalBuilder(FacturaEntity facturaEntityBase) {
 

@@ -19,8 +19,10 @@ public class FacturaServiceImpl implements IFacturaService {
     public FacturaEntity generarFactura(FacturaDTO dto) {
 
         IFacturaBuilder builder = facturaFactory.createFactory(dto.tipo);
+
         FacturaDirector director = new FacturaDirector(builder);
         director.construirFactura(dto.cliente, dto.subtotal);
+
         //Factura factura = director.getFactura();
         //return facturaRepository.guardar(factura);
        return director.getFactura();

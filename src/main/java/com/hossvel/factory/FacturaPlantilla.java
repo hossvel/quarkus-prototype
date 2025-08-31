@@ -1,4 +1,4 @@
-package com.hossvel.prototype;
+package com.hossvel.factory;
 
 import com.hossvel.model.FacturaEntity;
 import jakarta.annotation.PostConstruct;
