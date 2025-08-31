@@ -4,9 +4,11 @@ import com.hossvel.model.FacturaEntity;
 
 public class FacturaNacionalBuilder implements IFacturaBuilder{
 
-    private FacturaEntity factura = new FacturaEntity();
+    private FacturaEntity factura;
 
-
+    public FacturaNacionalBuilder(FacturaEntity facturaEntityBase) {
+        this.factura = facturaEntityBase.clone();
+    }
 
     public void construirCliente(String nombre) {
         factura.setCliente(nombre);
@@ -17,7 +19,7 @@ public class FacturaNacionalBuilder implements IFacturaBuilder{
         factura.setMoneda("PEN");
     }
 
-    @Override
+
     public void calcularSubTotal(double subtotal) {
         factura.setSubtotal(subtotal);
     }
