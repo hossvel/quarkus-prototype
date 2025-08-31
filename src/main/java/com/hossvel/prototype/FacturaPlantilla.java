@@ -5,7 +5,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class FacturaPrototype {
+public class FacturaPlantilla {
     private FacturaEntity plantilla;
 
     @PostConstruct
