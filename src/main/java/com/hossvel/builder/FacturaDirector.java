@@ -9,8 +9,8 @@ public class FacturaDirector {
         this.iFacturaBuilder = iFacturaBuilder;
     }
 
-    public void construirFactura(String cliente, double subtotal) {
-        //iFacturaBuilder.clonarPlantilla();
+    public void construirFactura(FacturaEntity facturaEntityBase,String cliente, double subtotal) {
+        iFacturaBuilder.clonar(facturaEntityBase);
         iFacturaBuilder.construirCliente(cliente);
         iFacturaBuilder.calcularSubTotal(subtotal);
         iFacturaBuilder.construirMoneda();

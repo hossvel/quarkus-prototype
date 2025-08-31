@@ -4,10 +4,10 @@ import com.hossvel.model.FacturaEntity;
 
 public class FacturaNacionalBuilder implements IFacturaBuilder{
 
-    private FacturaEntity factura;
+    private FacturaEntity factura = new FacturaEntity();
 
-    public FacturaNacionalBuilder(FacturaEntity facturaEntityBase) {
-        this.factura = facturaEntityBase.clone();
+    public void clonar(FacturaEntity facturaEntityBase){
+       // this.factura = facturaEntityBase.clone();
     }
 
     public void construirCliente(String nombre) {

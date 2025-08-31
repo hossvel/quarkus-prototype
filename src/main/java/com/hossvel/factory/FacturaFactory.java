@@ -10,15 +10,13 @@ import jakarta.inject.Inject;
 @ApplicationScoped
 public class FacturaFactory {
 
-    @Inject
-    private FacturaPlantilla facturaPlantilla;
 
     public IFacturaBuilder createFactory(String factureType) {
 
-        FacturaEntity facturaEntityBase = facturaPlantilla.getPlantilla();
+
         return switch (factureType.toLowerCase()) {
-            case "nacional" -> new FacturaNacionalBuilder(facturaEntityBase);
-            case "internacional" -> new FacturaInternacionalBuilder(facturaEntityBase);
+            case "nacional" -> new FacturaNacionalBuilder();
+            case "internacional" -> new FacturaInternacionalBuilder();
             default -> throw new IllegalArgumentException("Tipo de factura no válido");
         };
 

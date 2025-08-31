@@ -8,8 +8,7 @@ public class FacturaInternacionalBuilder implements IFacturaBuilder{
 
     private FacturaEntity factura;
 
-    public FacturaInternacionalBuilder(FacturaEntity facturaEntityBase) {
-
+    public void clonar(FacturaEntity facturaEntityBase){
         this.factura = facturaEntityBase.clone();
     }
 
