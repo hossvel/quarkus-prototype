@@ -3,6 +3,8 @@ package com.hossvel.builder;
 
 import com.hossvel.model.FacturaEntity;
 
+import java.time.LocalDate;
+
 public class FacturaInternacionalBuilder implements IFacturaBuilder{
 
 
@@ -37,6 +39,15 @@ public class FacturaInternacionalBuilder implements IFacturaBuilder{
         factura.setTotal(factura.getSubtotal() + factura.getImpuestos());
 
     }
+
+    public void calcularNumeroFactura(int numero) {
+        factura.setNumeroFactura(numero);
+    }
+
+    public void genereFechaEmision(){
+        factura.setFechaEmision(LocalDate.now());
+    }
+
 
     public FacturaEntity getFactura() {
         return factura;

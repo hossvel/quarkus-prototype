@@ -1,5 +1,7 @@
 package com.hossvel.model;
 
+import java.time.LocalDate;
+
 public class FacturaEntity implements Cloneable {
     private String empresa;
     private String cliente;
@@ -7,14 +9,8 @@ public class FacturaEntity implements Cloneable {
     private double subtotal;
     private double impuestos;
     private double total;
-
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
-    }
+    private int numeroFactura;
+    private LocalDate fechaEmision;
 
     @Override
     public FacturaEntity clone() {
@@ -63,5 +59,28 @@ public class FacturaEntity implements Cloneable {
 
     public void setImpuestos(double impuestos) {
         this.impuestos = impuestos;
+    }
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public int getNumeroFactura() {
+        return numeroFactura;
+    }
+
+    public void setNumeroFactura(int numeroFactura) {
+        this.numeroFactura = numeroFactura;
+    }
+
+    public LocalDate getFechaEmision() {
+        return fechaEmision;
+    }
+
+    public void setFechaEmision(LocalDate fechaEmision) {
+        this.fechaEmision = fechaEmision;
     }
 }
